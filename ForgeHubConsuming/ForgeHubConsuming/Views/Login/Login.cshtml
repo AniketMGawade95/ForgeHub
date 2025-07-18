@@ -1,0 +1,8 @@
+﻿<form asp-action="Login" method="post">
+    <input type="email" name="UserEmail" placeholder="Email" required />
+    <input type="password" name="Password" placeholder="Password" required />
+    <button type="submit">Login</button>
+    <p style="color:red">@Model?.ErrorMessage</p>
+</form>
+
+<a class="btn btn-outline-primary" asp-action="LostCode">Forgot Auth Code</a>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgeHubApi", "ForgeHubApi\ForgeHubApi.csproj", "{3DE1B0B6-B8FE-43DA-A44B-CB03A1314A8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DE1B0B6-B8FE-43DA-A44B-CB03A1314A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE1B0B6-B8FE-43DA-A44B-CB03A1314A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE1B0B6-B8FE-43DA-A44B-CB03A1314A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE1B0B6-B8FE-43DA-A44B-CB03A1314A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8972DE6A-DCF8-41E8-824D-159618F48012}
+	EndGlobalSection
+EndGlobal

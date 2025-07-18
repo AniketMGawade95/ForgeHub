@@ -1,0 +1,6 @@
+﻿<h3>Scan this QR code with Google Authenticator</h3>
+<img src="https://api.qrserver.com/v1/create-qr-code/?data=@ViewBag.OtpAuthUrl&size=200x200" />
+<form asp-action="VerifyCode" method="post">
+    <input type="text" name="Code" placeholder="Enter 6-digit code" required />
+    <button type="submit">Verify</button>
+</form>

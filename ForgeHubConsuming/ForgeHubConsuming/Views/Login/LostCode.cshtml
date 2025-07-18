@@ -1,0 +1,6 @@
+﻿<form asp-action="LostCode" method="post">
+    <input type="email" name="UserEmail" placeholder="Email" required />
+    <input type="password" name="Password" placeholder="Password" required />
+    <button type="submit">Submit</button>
+    <p style="color:red">@Model?.ErrorMessage</p>
+</form>

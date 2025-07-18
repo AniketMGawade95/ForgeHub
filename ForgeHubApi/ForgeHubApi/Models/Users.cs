@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ForgeHubProj.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace ForgeHubApi.Models
 {
@@ -18,5 +19,10 @@ namespace ForgeHubApi.Models
 
         public bool RgStatus { get; set; }
         public string? GoogleAuthSecretKey { get; set; }
+
+
+        // Navigation properties
+        public List<RFQ> RFQs { get; set; } // For Buyers
+        public List<RFQQuotation> RFQQuotations { get; set; } // For Vendors
     }
 }

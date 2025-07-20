@@ -1,12 +1,13 @@
 ﻿using ForgeHubApi.Models;
-using System.ComponentModel.DataAnnotations;
+using ForgeHubProj.Models;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace ForgeHubProj.Models
+namespace ForgeHubApi.DTO
 {
-    public class RFQ
+    public class RFQDTO
     {
-        [Key]
+       
         public int RFQId { get; set; }
 
         public string RFQNo { get; set; }
@@ -23,19 +24,15 @@ namespace ForgeHubProj.Models
         public DateTime? BidDate { get; set; } = DateTime.Now;
         public DateTime? ExpiryDateofBid { get; set; }
 
-        [Required]
-        [ForeignKey("BuyerId")]
+       
         public int BuyerId { get; set; }
-        public Users Buyer { get; set; }
+   
 
         public string? Mobile { get; set; }
         public string? ContactPerson { get; set; }
 
-        [Required]
+
         public string? Status { get; set; } = "Open";
 
-        // Navigation
-        public List<RFQQuotation> RFQQuotations { get; set; }
-        public FinalizedQuotation FinalizedQuotation { get; set; }
     }
 }

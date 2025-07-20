@@ -1,0 +1,118 @@
+﻿@model ForgeHubConsuming.DTO.RFQDTO
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2 class="mb-4">Edit RFQ</h2>
+
+<div class="card p-4 shadow">
+    <form asp-action="Edit">
+        <input type="hidden" asp-for="RFQId" />
+
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <label asp-for="RFQNo" class="form-label fw-bold"></label>
+                <input asp-for="RFQNo" class="form-control" />
+                <span asp-validation-for="RFQNo" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="IndentNo" class="form-label fw-bold"></label>
+                <input asp-for="IndentNo" class="form-control" />
+                <span asp-validation-for="IndentNo" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="RFQLineNo" class="form-label fw-bold"></label>
+                <input asp-for="RFQLineNo" class="form-control" />
+                <span asp-validation-for="RFQLineNo" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="ItemNo" class="form-label fw-bold"></label>
+                <input asp-for="ItemNo" class="form-control" />
+                <span asp-validation-for="ItemNo" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label asp-for="ItemName" class="form-label fw-bold"></label>
+                <input asp-for="ItemName" class="form-control" />
+                <span asp-validation-for="ItemName" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="ReqQty" class="form-label fw-bold"></label>
+                <input asp-for="ReqQty" class="form-control" />
+                <span asp-validation-for="ReqQty" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="Description" class="form-label fw-bold"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="DeliveryLocation" class="form-label fw-bold"></label>
+                <input asp-for="DeliveryLocation" class="form-control" />
+                <span asp-validation-for="DeliveryLocation" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label asp-for="UOM" class="form-label fw-bold"></label>
+                <input asp-for="UOM" class="form-control" />
+                <span asp-validation-for="UOM" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="ReqDeliveryDate" class="form-label fw-bold"></label>
+                <input asp-for="ReqDeliveryDate" class="form-control" />
+                <span asp-validation-for="ReqDeliveryDate" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="FactoryCode" class="form-label fw-bold"></label>
+                <input asp-for="FactoryCode" class="form-control" />
+                <span asp-validation-for="FactoryCode" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="BidDate" class="form-label fw-bold"></label>
+                <input asp-for="BidDate" class="form-control" />
+                <span asp-validation-for="BidDate" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label asp-for="ExpiryDateofBid" class="form-label fw-bold"></label>
+                <input asp-for="ExpiryDateofBid" class="form-control" />
+                <span asp-validation-for="ExpiryDateofBid" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="BuyerId" class="form-label fw-bold"></label>
+                <input asp-for="BuyerId" class="form-control" />
+                <span asp-validation-for="BuyerId" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="Mobile" class="form-label fw-bold"></label>
+                <input asp-for="Mobile" class="form-control" />
+                <span asp-validation-for="Mobile" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="ContactPerson" class="form-label fw-bold"></label>
+                <input asp-for="ContactPerson" class="form-control" />
+                <span asp-validation-for="ContactPerson" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label asp-for="Status" class="form-label fw-bold"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-primary me-2">Update</button>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

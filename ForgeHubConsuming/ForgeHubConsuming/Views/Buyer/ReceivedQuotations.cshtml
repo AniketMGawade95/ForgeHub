@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ReceivedQuotationDto>
+
+<h2>Received Quotations</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Bid No</th>
+            <th>Item</th>
+            <th>Amount</th>
+            <th>Vendor</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var q in Model)
+        {
+            <tr>
+                <td>@q.BidNo</td>
+                <td>@q.ItemName</td>
+                <td>@q.QuotedAmount</td>
+                <td>@q.VendorEmail</td>
+                <td>
+                    <form asp-action="ApproveQuotation" method="post" style="display:inline;">
+                        <input type="hidden" name="quotationId" value="@q.QuotationId" />
+                        <button class="btn btn-success btn-sm">Approve</button>
+                    </form>
+                    <form asp-action="RejectQuotation" method="post" style="display:inline;">
+                        <input type="hidden" name="quotationId" value="@q.QuotationId" />
+                        <button class="btn btn-danger btn-sm">Reject</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

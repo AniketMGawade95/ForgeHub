@@ -1,0 +1,26 @@
+﻿@model IEnumerable<FinalizedQuotationDto>
+
+<h2>Finalized Quotations</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>RFQ No</th>
+            <th>Item</th>
+            <th>Amount</th>
+            <th>Vendor</th>
+            <th>Finalized Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var f in Model)
+        {
+            <tr>
+                <td>@f.RFQNo</td>
+                <td>@f.ItemName</td>
+                <td>@f.QuotedAmount</td>
+                <td>@f.VendorEmail</td>
+                <td>@f.FinalizedDate?.ToString("dd-MMM-yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>

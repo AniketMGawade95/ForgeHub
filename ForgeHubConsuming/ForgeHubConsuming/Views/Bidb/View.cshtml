@@ -1,0 +1,98 @@
+﻿@model ForgeHubConsuming.DTO.RFQDTO
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h2 class="mb-4">RFQ Details</h2>
+
+<div class="card shadow p-4">
+    <div class="row">
+        @* Column 1 *@
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.RFQId):</strong>
+            <div>@Html.DisplayFor(m => m.RFQId)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.RFQNo):</strong>
+            <div>@Html.DisplayFor(m => m.RFQNo)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.IndentNo):</strong>
+            <div>@Html.DisplayFor(m => m.IndentNo)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.RFQLineNo):</strong>
+            <div>@Html.DisplayFor(m => m.RFQLineNo)</div>
+        </div>
+
+        @* Column 2 *@
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.ItemNo):</strong>
+            <div>@Html.DisplayFor(m => m.ItemNo)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.ItemName):</strong>
+            <div>@Html.DisplayFor(m => m.ItemName)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.ReqQty):</strong>
+            <div>@Html.DisplayFor(m => m.ReqQty)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.Description):</strong>
+            <div>@Html.DisplayFor(m => m.Description)</div>
+        </div>
+
+        @* Column 3 *@
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.DeliveryLocation):</strong>
+            <div>@Html.DisplayFor(m => m.DeliveryLocation)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.UOM):</strong>
+            <div>@Html.DisplayFor(m => m.UOM)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.ReqDeliveryDate):</strong>
+            <div>@Html.DisplayFor(m => m.ReqDeliveryDate)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.FactoryCode):</strong>
+            <div>@Html.DisplayFor(m => m.FactoryCode)</div>
+        </div>
+
+        @* Column 4 *@
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.BidDate):</strong>
+            <div>@Html.DisplayFor(m => m.BidDate)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.ExpiryDateofBid):</strong>
+            <div>@Html.DisplayFor(m => m.ExpiryDateofBid)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.BuyerId):</strong>
+            <div>@Html.DisplayFor(m => m.BuyerId)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.Mobile):</strong>
+            <div>@Html.DisplayFor(m => m.Mobile)</div>
+        </div>
+
+        @* Final Row *@
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.ContactPerson):</strong>
+            <div>@Html.DisplayFor(m => m.ContactPerson)</div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <strong>@Html.DisplayNameFor(m => m.Status):</strong>
+            <div>@Html.DisplayFor(m => m.Status)</div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        @* <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.RFQId">Edit</a> *@
+        <a class="btn btn-primary" asp-action="Index">Back to List</a>
+    </div>
+</div>

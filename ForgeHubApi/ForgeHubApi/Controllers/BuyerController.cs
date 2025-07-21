@@ -55,11 +55,11 @@ namespace ForgeHubApi.Controllers
 
         // READ ALL
         [HttpGet("ListRFQ")]
-        public async Task<ActionResult<IEnumerable<RFQDto>>> GetRFQs()
+        public async Task<ActionResult<IEnumerable<RFQDTO>>> GetRFQs()
         {
             var rfqs = await db.RFQs
                 .Include(r => r.Buyer)
-                .Select(r => new RFQDto
+                .Select(r => new RFQDTO
                 {
                     RFQId = r.RFQId,
                     RFQNo = r.RFQNo,

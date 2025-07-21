@@ -34,5 +34,6 @@ namespace ForgeHubApi.DTO
 
         public string? Status { get; set; } = "Open";
 
+        public string? BuyerEmail { get; set; }
     }
 }
